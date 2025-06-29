@@ -10,49 +10,52 @@ import { useSignin } from '@/hooks/useSignin';
 const cx = classNames.bind(styles);
 
 const SignIn = () => {
-    const signinMutation = useSignin();
-    const [username, setUsername] = useState<string>('');
+  const signinMutation = useSignin();
+  const [username, setUsername] = useState<string>('');
 
-    const handleSubmit = async () => {
+  const handleSubmit = async () => {
+    signinMutation.mutate({ username });
+  };
 
-        signinMutation.mutate({ username });
-    }
+  return (
+    <div className={cx('signin')}>
+      <Link to="/" className={cx('logo')}>
+        <img src="/assets/logo.png" alt="Logo" />
+      </Link>
 
-    return (
-        <div className={cx('signin')}>
-            <Link to="/" className={cx('logo')}>
-                <img src="/assets/logo.png" alt="Logo" />
-            </Link>
+      <div className={cx('container')}>
+        <h1 className={cx('title')}>Sign In</h1>
 
-            <div className={cx('container')}>
-                <h1 className={cx('title')}>Sign In</h1>
+        <form
+          className={cx('form')}
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit();
+          }}
+        >
+          <label htmlFor="username" className={cx('label')}>
+            Username
+          </label>
+          <Input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter username"
+            style={{ marginBottom: '16px', fontSize: '1.6rem' }}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
 
-                <form
-                    className={cx('form')}
-                    onSubmit={(e) => {
-                        e.preventDefault();
-                        handleSubmit();
-                    }}
-                >
-                    <label htmlFor="username" className={cx('label')}>
-                        Username
-                    </label>
-                    <Input
-                        type="text"
-                        id="username"
-                        name="username"
-                        placeholder="Enter username"
-                        style={{ marginBottom: '16px', fontSize: '1.6rem' }}
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
-
-                    <Button variant="secondary" children="Sign In" style={{ width: '100%', height: '54px' }} type='submit' />
-
-                </form>
-            </div>
-        </div>
-    );
+          <Button
+            variant="secondary"
+            children="Sign In"
+            style={{ width: '100%', height: '54px' }}
+            type="submit"
+          />
+        </form>
+      </div>
+    </div>
+  );
 };
 
 export default SignIn;

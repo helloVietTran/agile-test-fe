@@ -1,4 +1,3 @@
-
 import type { ButtonHTMLAttributes } from 'react';
 import classNames from 'classnames/bind';
 
@@ -22,14 +21,10 @@ const Button: React.FC<ButtonProps> = ({
   const buttonClassName = cx('button', variant);
 
   return (
-    <button
-      className={buttonClassName}
-      style={style}
-      {...rest}
-    >
+    <button className={buttonClassName} style={style} {...rest}>
       {children}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

@@ -7,18 +7,17 @@ import { useAuth } from '@/context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { logout } from '@/api/authApi';
 
-
 export const useLogout = () => {
-    const { logout : logoutAction } = useAuth();
-    const navigate = useNavigate();
+  const { logout: logoutAction } = useAuth();
+  const navigate = useNavigate();
 
-    return useMutation<LogoutResponse, Error>({
-        mutationFn: logout,
-        onSuccess: () => {
-            tokenStorage.clear();
-            logoutAction();
-            navigate("/");
-            toast.success('Đăng xuất thành công!');
-        },
-    });
+  return useMutation<LogoutResponse, Error>({
+    mutationFn: logout,
+    onSuccess: () => {
+      tokenStorage.clear();
+      logoutAction();
+      navigate('/');
+      toast.success('Đăng xuất thành công!');
+    },
+  });
 };

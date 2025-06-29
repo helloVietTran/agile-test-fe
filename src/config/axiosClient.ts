@@ -1,11 +1,11 @@
-import axios, { AxiosError, type AxiosRequestConfig } from "axios";
-import { tokenStorage } from "@/utils/tokenStorage";
-import { refreshToken } from "@/api/authApi";
+import axios, { AxiosError, type AxiosRequestConfig } from 'axios';
+import { tokenStorage } from '@/utils/tokenStorage';
+import { refreshToken } from '@/api/authApi';
 
 const axiosClient = axios.create({
-  baseURL: "https://api-test-web.agiletech.vn/",
+  baseURL: 'https://api-test-web.agiletech.vn/',
   headers: {
-    "Content-Type": "application/json",
+    'Content-Type': 'application/json',
   },
   withCredentials: false,
 });

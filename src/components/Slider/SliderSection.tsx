@@ -79,19 +79,18 @@ const SliderSection = () => {
         transition={{ duration: 0.8 }}
       >
         <Slider {...settings}>
-          {data && data.map((item) => (
-            <div key={item.id} className={cx('slide')}>
-              <SliderCard
-                
-                id={item.id}
-                name={item.name}
-                personalWebsite={item.personalWebsite}
-                description={item.description}
-
-                desctiption={item.desctiption}
-              />
-            </div>
-          ))}
+          {data &&
+            data.map((item) => (
+              <div key={item.id} className={cx('slide')}>
+                <SliderCard
+                  id={item.id}
+                  name={item.name}
+                  personalWebsite={item.personalWebsite}
+                  description={item.description}
+                  desctiption={item.desctiption}
+                />
+              </div>
+            ))}
         </Slider>
       </motion.div>
     </motion.section>

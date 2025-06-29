@@ -1,37 +1,37 @@
-@use "../../styles/variables" as vars;
+@use '../../styles/variables' as vars;
 
 .card {
-    max-width: 932px;
-    height: 332px;
+  max-width: 932px;
+  height: 332px;
 
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 20px 30px rgba(156, 105, 226, 0.3);
-    padding: 60px 70px 50px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(156, 105, 226, 0.3);
+  padding: 60px 70px 50px;
 
-    &__inner {
-        display: flex;
-        gap: 30px;
-    }
+  &__inner {
+    display: flex;
+    gap: 30px;
+  }
 
-    &__name {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: vars.$dark-navy-blue;
-        line-height: 1.525;
-    }
+  &__name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: vars.$dark-navy-blue;
+    line-height: 1.525;
+  }
 
-    &__link {
-        display: inline-block;
-        color: vars.$light-purple;
-        margin-bottom: 16px;
-        font-weight: 600;
-    }
+  &__link {
+    display: inline-block;
+    color: vars.$light-purple;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
 
-    &__description {
-        max-width: 560px;
-        line-height: 1.525;
-        font-weight: 400;
-        color: vars.$soft-light-gray;
-    }
+  &__description {
+    max-width: 560px;
+    line-height: 1.525;
+    font-weight: 400;
+    color: vars.$soft-light-gray;
+  }
 }

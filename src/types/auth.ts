@@ -7,6 +7,6 @@ export interface SigninResponse {
   refreshToken: string;
 }
 
-export interface LogoutResponse{
-  code: number
+export interface LogoutResponse {
+  code: number;
 }

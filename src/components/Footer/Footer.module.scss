@@ -1,4 +1,4 @@
-@use "../../styles/variables" as vars;
+@use '../../styles/variables' as vars;
 
 .footer {
   display: flex;
@@ -55,7 +55,7 @@
 .footer__section-item {
   color: vars.$dark-navy-blue;
   padding: 2px;
-  &:hover{
+  &:hover {
     color: vars.$hover-purple;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -80,11 +80,10 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  &:hover{
+  &:hover {
     background-color: vars.$hover-pink;
-    svg{
-        color: white;
+    svg {
+      color: white;
     }
   }
 }
-

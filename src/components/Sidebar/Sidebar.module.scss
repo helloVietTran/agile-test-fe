@@ -1,17 +1,17 @@
-@use "../../styles/variables" as vars;
+@use '../../styles/variables' as vars;
 
 .sidebar {
-    &__logo {
-        margin-left: 64px;
-        margin-bottom: 40px;
-    }
+  &__logo {
+    margin-left: 64px;
+    margin-bottom: 40px;
+  }
 }
 
 .nav-item {
-    font-size: 1.8rem;
-    line-height: 1.6;
-    letter-spacing: 0.1rem;
-    padding-bottom: 10px;
-    color: vars.$dark-navy-blue;
-    cursor: pointer;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  letter-spacing: 0.1rem;
+  padding-bottom: 10px;
+  color: vars.$dark-navy-blue;
+  cursor: pointer;
 }

@@ -1,38 +1,37 @@
-@use "../../styles/variables" as vars;
-@use "sass:color";
+@use '../../styles/variables' as vars;
+@use 'sass:color';
 
 .button {
-    border: none;
-    font-size: 1.6rem;
-    height: 60px;
-    line-height: 2.8rem;
-    padding: 0 30px;
-    border-radius: 999px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
-    font-weight: 700;
+  border: none;
+  font-size: 1.6rem;
+  height: 60px;
+  line-height: 2.8rem;
+  padding: 0 30px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  font-weight: 700;
 
-    &.primary {
-        background-color: white;
-        color: vars.$dark-navy-blue;
+  &.primary {
+    background-color: white;
+    color: vars.$dark-navy-blue;
 
-        &:hover {
-            background-color: vars.$light-purple;
-            color: white;
-        }
+    &:hover {
+      background-color: vars.$light-purple;
+      color: white;
     }
+  }
 
-    &.secondary {
-        background-color: vars.$light-purple;
-        color: white;
+  &.secondary {
+    background-color: vars.$light-purple;
+    color: white;
 
-        &:hover {
-            $dark-purple: color.adjust(vars.$light-purple, $lightness: -10%); 
-            background-color: $dark-purple;
-            
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    &:hover {
+      $dark-purple: color.adjust(vars.$light-purple, $lightness: -10%);
+      background-color: $dark-purple;
 
-        }
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
+  }
 }

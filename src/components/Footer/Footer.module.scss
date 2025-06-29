@@ -1,0 +1,90 @@
+@use "../../styles/variables" as vars;
+
+.footer {
+  display: flex;
+  column-gap: 48px;
+  margin-top: 70px;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+
+  img {
+    margin-bottom: 64px;
+  }
+}
+
+.footer__address {
+  max-width: 260px;
+  font-weight: 700;
+  color: vars.$dark-navy-blue;
+  margin-bottom: 20px;
+  line-height: 1.45;
+}
+
+.footer__email,
+.footer__phone {
+  font-weight: 300;
+  color: vars.$soft-light-gray;
+  font-size: 15px;
+  line-height: 1.525;
+  letter-spacing: 0.016rem;
+}
+
+.footer__sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+  flex: 1 1;
+}
+
+.footer__section-title {
+  font-weight: 600;
+  color: vars.$dark-navy-blue;
+  margin-bottom: 32px;
+}
+
+.footer__section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__section-item {
+  color: vars.$dark-navy-blue;
+  padding: 2px;
+  &:hover{
+    color: vars.$hover-purple;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+}
+
+.footer__socials {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.footer__social-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  &:hover{
+    background-color: vars.$hover-pink;
+    svg{
+        color: white;
+    }
+  }
+}
+

@@ -1,0 +1,25 @@
+@use '../../../styles/variables' as vars;
+
+.sidebar-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.sidebar-wrapper {
+  width: 280px;
+  background-color: vars.$sidebar-bg;
+  padding: 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content-wrapper{
+  flex: 1;
+  padding: 40px 80px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background-color: white;
+}

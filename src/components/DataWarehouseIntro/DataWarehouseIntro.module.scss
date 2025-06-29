@@ -1,0 +1,35 @@
+@use "../../styles/variables" as vars;
+
+.intro-container{
+    position: relative;
+}
+
+.intro-content{
+    padding: 96px 0;
+    max-width: 700px;
+
+    &__title{
+        font-size: 8rem;
+        font-size: Helvetica, sans-serif;
+        color: vars.$dark-navy-blue;
+        margin-bottom: 48px;
+    }
+
+    &__description{
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.8rem;
+        max-width: 380px;
+        line-height: 1.625;
+        color: rgb(75, 93, 104);
+        margin-bottom: 48px;
+        font-weight: 500;
+    }
+}
+
+.intro-image{
+    position: absolute;
+    right: -24px;
+    bottom: 48px;
+    z-index: 1;
+
+}

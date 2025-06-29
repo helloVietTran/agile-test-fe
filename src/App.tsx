@@ -1,16 +1,15 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import MainLayout from "@/components/Layout/MainLayout/MainLayout"
-import HomePage from "@/pages/HomePage"
-import SignInPage from "@/pages/SignInPage"
-import SidebarLayout from "@/components/Layout/SidebarLayout/SidebarLayout"
-import ProfilePage from "@/pages/ProfilePage"
+import MainLayout from '@/components/Layout/MainLayout/MainLayout';
+import HomePage from '@/pages/HomePage';
+import SignInPage from '@/pages/SignInPage';
+import SidebarLayout from '@/components/Layout/SidebarLayout/SidebarLayout';
+import ProfilePage from '@/pages/ProfilePage';
 
 function App() {
   return (
-
     <>
       <BrowserRouter>
         <Routes>
@@ -20,7 +19,6 @@ function App() {
           </Route>
           <Route element={<SidebarLayout />}>
             <Route path="/profile" element={<ProfilePage />} />
-
           </Route>
         </Routes>
       </BrowserRouter>
@@ -32,8 +30,7 @@ function App() {
         theme="light"
       />
     </>
-
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,10 +1,10 @@
-import classNames from "classnames/bind";
-import { Link, useNavigate } from "react-router-dom";
+import classNames from 'classnames/bind';
+import { Link, useNavigate } from 'react-router-dom';
 
-import Button from "@/components/Button/Button"
-import styles from "./Header.module.scss";
-import { useAuth } from "@/context/AuthContext";
-import { useLogout } from "@/hooks/useLogout";
+import Button from '@/components/Button/Button';
+import styles from './Header.module.scss';
+import { useAuth } from '@/context/AuthContext';
+import { useLogout } from '@/hooks/useLogout';
 
 const cx = classNames.bind(styles);
 
@@ -13,13 +13,13 @@ const Header = () => {
   const { mutate } = useLogout();
 
   const navigate = useNavigate();
-  
+
   const handleProfileClick = () => {
-    navigate("/profile");
+    navigate('/profile');
   };
 
   const handleSignInClick = () => {
-    navigate("/sign-in");
+    navigate('/sign-in');
   };
 
   const handleLogoutClick = () => {
@@ -30,36 +30,25 @@ const Header = () => {
     <div className={cx('header')}>
       <div className={cx('header_wrapper')}>
         <Link to="/">
-          <img
-            src="/assets/logo.png"
-            alt="Logo"
-          />
+          <img src="/assets/logo.png" alt="Logo" />
         </Link>
-        {
-          isAuthenticated ?
-            <div className={cx('auth')}>
-              <Button
-                onClick={handleProfileClick}
-                variant="secondary"
-              >
-                Profile
-              </Button>
-              <Button
-                onClick={handleLogoutClick}
-                children="Logout"
-                variant="secondary"
-              />
-            </div>
-            :
+        {isAuthenticated ? (
+          <div className={cx('auth')}>
+            <Button onClick={handleProfileClick} variant="secondary">
+              Profile
+            </Button>
             <Button
-              onClick={handleSignInClick}
-              children="Sign In"
+              onClick={handleLogoutClick}
+              children="Logout"
+              variant="secondary"
             />
-        }
-
+          </div>
+        ) : (
+          <Button onClick={handleSignInClick} children="Sign In" />
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,4 +1,4 @@
-@use "../../styles/variables" as vars;
+@use '../../styles/variables' as vars;
 
 .slider-section {
   background: vars.$light-purple;
@@ -20,11 +20,11 @@
 
 .slider-wrapper {
   width: 100%;
-  max-width: 960px; 
+  max-width: 960px;
   padding: 0 24px;
 }
 
-.slide{
+.slide {
   padding: 0 12px;
 }
 
@@ -46,7 +46,6 @@
 
 .nav-button:hover {
   transform: translateY(-50%) scale(1.05);
-
 }
 
 .prev {

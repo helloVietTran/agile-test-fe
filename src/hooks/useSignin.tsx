@@ -7,7 +7,6 @@ import { tokenStorage } from '@/utils/tokenStorage';
 import { useAuth } from '@/context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-
 export const useSignin = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -17,11 +16,11 @@ export const useSignin = () => {
     onSuccess: (data) => {
       tokenStorage.setTokens(data.accessToken, data.refreshToken);
       login();
-      navigate("/");
+      navigate('/');
       toast.success('Đăng nhập thành công!');
     },
     onError: (err: any) => {
-        console.log(err);
+      console.log(err);
       toast.error('Đăng nhập thất bại!');
     },
   });

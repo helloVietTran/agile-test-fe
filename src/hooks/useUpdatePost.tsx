@@ -4,18 +4,18 @@ import { updatePost } from '@/api/postApi';
 import type { UpdatePostRequest, UpdatePostResponse } from '@/types/post';
 
 const useUpdatePost = () => {
-    const queryClient = useQueryClient();
+  const queryClient = useQueryClient();
 
-    return useMutation<UpdatePostResponse, Error, UpdatePostRequest>({
-        mutationFn: updatePost,
-        onSuccess: () => {
-            queryClient.invalidateQueries({ queryKey: ['posts'] });
-            toast.success('Cập nhật thành công!');
-        },
-        onError: (err: any) => {
-            console.log(err);
-            toast.error('Cập nhật thất bại!');
-        },
-    });
+  return useMutation<UpdatePostResponse, Error, UpdatePostRequest>({
+    mutationFn: updatePost,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['posts'] });
+      toast.success('Cập nhật thành công!');
+    },
+    onError: (err: any) => {
+      console.log(err);
+      toast.error('Cập nhật thất bại!');
+    },
+  });
 };
 export default useUpdatePost;

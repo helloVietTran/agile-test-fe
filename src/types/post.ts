@@ -18,16 +18,14 @@ export interface GetPostsParams {
   page?: number;
 }
 
-
 export interface CreatePostRequest {
   title: string;
   description: string;
   tags: string[];
 }
 
-export interface CreatePostResponse{
-  code: number
-
+export interface CreatePostResponse {
+  code: number;
 }
 
 export interface UpdatePostRequest {
@@ -36,5 +34,5 @@ export interface UpdatePostRequest {
 }
 
 export interface UpdatePostResponse {
-  code: number
+  code: number;
 }

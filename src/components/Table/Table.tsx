@@ -1,12 +1,10 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
-
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6';
 
 import styles from './Table.module.scss';
 
 const cx = classNames.bind(styles);
-
 
 export interface Column<T> {
   title: string;
@@ -25,7 +23,6 @@ interface TableProps<T> {
   pagination: PaginationProps;
   onPageChange: (page: number) => void;
 }
-
 
 export default function Table<T>({
   columns,
@@ -81,4 +78,3 @@ export default function Table<T>({
     </div>
   );
 }
-

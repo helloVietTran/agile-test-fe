@@ -1,7 +1,7 @@
 @use '../../../styles/variables' as vars;
 
 .main-layout {
-  padding: 48px 0;
+  padding: 48px 0; 
   background-color: vars.$white-bg;
   min-height: 100vh;
 }
@@ -9,4 +9,6 @@
 .main-layout__content {
   max-width: 1120px;
   margin: 0 auto;
+
+  padding: 0 24px; 
 }

@@ -74,7 +74,8 @@
   &__button {
     display: flex;
     align-items: center;
-
+    z-index: 2;
+    position: relative;
     column-gap: 8px;
 
     span {
@@ -97,6 +98,74 @@
       svg {
         margin-left: 5px;
       }
+    }
+  }
+}
+
+
+@media (max-width: 1023px) {
+  .features-container {
+    margin: 48px 0;
+  }
+
+  .heading-wrapper {
+    margin-bottom: 64px;
+
+    &__title {
+      font-size: 3.2rem;
+      margin-bottom: 24px;
+    }
+
+    &__subtitle {
+      font-size: 1.6rem;
+      max-width: 80%;
+    }
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 450px;
+      height: auto;
+      text-align: center;
+      margin: 0 auto;
+      padding: 32px;
+    }
+
+
+    &__item__icon {
+      max-width: 120px;
+      margin-right: 0;
+      margin-bottom: 24px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .feature-item-content {
+    max-width: 80%;
+    text-align: left;
+
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    &__description {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    &__button {
+      justify-content: center;
     }
   }
 }

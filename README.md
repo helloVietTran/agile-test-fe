@@ -1,69 +1,48 @@
-# React + TypeScript + Vite
+# 🌐 Agile Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bài test frontend intern 
 
-Currently, two official plugins are available:
+## 🚀 Công nghệ sử dụng
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React.js
+- TypeScript
+- SCSS
+- React Router
+- Axios
+- React Query
+- Framer motion
 
-## Expanding the ESLint configuration
+## ⚙️ Hướng dẫn cài đặt và chạy dự án
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+git clone https://github.com/helloVietTran/agile-test-fe
+cd agile-test-fe
+npm run dev
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+## 📸 Một số ảnh giao diện
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### 💻 Giao diện Desktop
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/66ce0c59-1852-446d-b03d-e25ffb942cee" alt="Desktop 1" style="width: 48%;" />
+  <img src="https://github.com/user-attachments/assets/7435e39c-6ef8-41ec-9a4a-e7050add699c" alt="Desktop 2" style="width: 48%;" />
+  <img src="https://github.com/user-attachments/assets/58f00ae7-e6c2-4e21-aeb0-f5944863ac17" alt="Desktop 3" style="width: 48%;" />
+</div>
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+#### 📱 Giao diện Responsive (Mobile / Tablet)
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/336ac3ae-8912-4f8d-8510-b8e850756abd" alt="Responsive 1" style="width: 48%;" />
+  <img src="https://github.com/user-attachments/assets/fa732e56-47f5-4c5a-a367-0f5dcff5bd13" alt="Responsive 2" style="width: 48%;" />
+</div>
+
+
+## 📫 Liên hệ
+**Ứng viên**: Trần Việt Anh
+
+**Email**: tranvietanh.ft@gmail.com
+
+**Demo on Vercel**: https://agile-test-fe.vercel.ap
+
+Github: https://github.com/helloVietTran/agile-test-fe

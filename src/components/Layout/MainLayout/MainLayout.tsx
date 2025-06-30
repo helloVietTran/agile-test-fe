@@ -7,11 +7,11 @@ const cx = classNames.bind(styles);
 
 const MainLayout = () => {
   return (
-    <div className={cx('main-layout')}>
-      <main className={cx('main-layout__content')}>
+    <main className={cx('main-layout')}>
+      <div className={cx('main-layout__content')}>
         <Outlet />
-      </main>
-    </div>
+      </div>
+    </main>
   );
 };
 

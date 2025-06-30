@@ -49,11 +49,11 @@
 }
 
 .prev {
-  left: -60px;
+  left: -40px;
 }
 
 .next {
-  right: -60px;
+  right: -40px;
 }
 
 .icon {
@@ -77,4 +77,26 @@
   background-color: white;
   border-radius: 50%;
   transition: transform 0.3s ease;
+}
+
+@media (max-width: 1023px) {
+  .nav-button {
+    width: 40px;
+    height: 40px;
+ background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%; 
+
+  }
+
+  .icon {
+    font-size: 40px;
+  }
+
+  .prev {
+    left: -10px;
+  }
+
+  .next {
+    right: -10px;
+  }
 }

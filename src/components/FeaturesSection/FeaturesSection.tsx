@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 
 import styles from './FeaturesSection.module.scss';
 import ArrowRightIcon from '@/components/Icons/ArrowRightIcon';
-import { featuresData, Feature } from '@/config/data';
+import { featuresData, type Feature } from '@/config/data';
 
 const cx = classNames.bind(styles);
 
@@ -46,18 +46,19 @@ const FeaturesSection = () => {
               className={cx('features-list__item')}
               key={feature.id}
             >
-              {/* Background Image Scale */}
               <motion.div
                 className={cx('features-list__item__bg')}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isItemInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
-              >
-                <img
-                  src={feature.backgroundImage}
-                  alt={`${feature.title} Background`}
-                />
-              </motion.div>
+                style={{
+                  backgroundImage: `url(${feature.backgroundImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  width: '100%',
+                  height: '100%',
+                }}
+              />
 
               {/* Icon scale + fade*/}
               <motion.div
